@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository code
         uses: actions/checkout@v3
 
-      - name: List files in zips folder before unzip
+      - name: Show files inside zips folder
         run: ls -la zips
 
-      - name: Unzip ZIP file
+      - name: Unzip the ZIP file
         run: unzip "zips/All Commands-20250719T092014Z-1-001.zip" -d extracted
 
-      - name: List files in extracted folder after unzip
+      - name: Show files inside extracted folder
         run: ls -la extracted
