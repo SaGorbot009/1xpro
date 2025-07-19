@@ -1,4 +1,4 @@
-name: Unzip ZIP file
+name: Unzip ZIP file on push
 
 on:
   push:
@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: List files before unzip
+      - name: List files in zips folder
         run: ls -la zips
 
       - name: Unzip ZIP file
         run: unzip "zips/All Commands-20250719T092014Z-1-001.zip" -d extracted
 
-      - name: List files after unzip
+      - name: List files in extracted folder
         run: ls -la extracted
