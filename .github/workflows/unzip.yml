@@ -13,11 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: List files in zips folder
+      - name: List files in zips folder before unzip
         run: ls -la zips
 
       - name: Unzip ZIP file
         run: unzip "zips/All Commands-20250719T092014Z-1-001.zip" -d extracted
 
-      - name: List files in extracted folder
+      - name: List files in extracted folder after unzip
         run: ls -la extracted
