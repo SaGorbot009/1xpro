@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: List files before unzip
-        run: ls -la
+        run: ls -la zips
 
       - name: Unzip ZIP file
-        run: unzip "All Commands-20250719T092014Z-1-001.zip" -d extracted
+        run: unzip "zips/All Commands-20250719T092014Z-1-001.zip" -d extracted
 
       - name: List files after unzip
         run: ls -la extracted
