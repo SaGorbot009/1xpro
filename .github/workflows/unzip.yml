@@ -3,7 +3,7 @@ name: Unzip ZIP file
 on:
   push:
     branches:
-      - main  # যখন main ব্রাঞ্চে push হবে, তখন রান হবে
+      - main
 
 jobs:
   unzip_job:
@@ -17,7 +17,7 @@ jobs:
         run: ls -la
 
       - name: Unzip ZIP file
-        run: unzip path/to/All Commands-20250719T092014Z-1-001.zip -d path/to/extract_folder
+        run: unzip "All Commands-20250719T092014Z-1-001.zip" -d extracted
 
       - name: List files after unzip
-        run: ls -la path/to/extract_folder
+        run: ls -la extracted
